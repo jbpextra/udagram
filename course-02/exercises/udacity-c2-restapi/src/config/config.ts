@@ -7,7 +7,8 @@ export const config = {
     "dialect": "postgres",
     "aws_region": "us-east-1",
     "aws_profile": "default",
-    "aws_media_bucket": process.env.UDAGRAM_MEDIA_BUCKET
+    "aws_media_bucket": process.env.UDAGRAM_MEDIA_BUCKET,
+    "jwt_secret":process.env.UDAGRAM_JWT_SECRET
   },
   "prod": {
     "username": process.env.UDAGRAM_DB_USERNAME,
@@ -17,6 +18,7 @@ export const config = {
     "dialect": "postgres",
     "aws_region": "us-east-1",
     "aws_profile": "default",
-    "aws_media_bucket": process.env.UDAGRAM_MEDIA_BUCKET
+    "aws_media_bucket": process.env.UDAGRAM_MEDIA_BUCKET,
+    "jwt_secret":process.env.UDAGRAM_JWT_SECRET
   }
 }
