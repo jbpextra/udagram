@@ -12,7 +12,7 @@ import { Car, cars as cars_list } from './cars';
   const port = 8082; 
   
   //use middleware so post bodies 
-  //are accessable as req.body.{{variable}}
+  // are accessable as req.body.{{variable}}
   app.use(bodyParser.json()); 
 
   // Root URI call
@@ -70,6 +70,18 @@ import { Car, cars as cars_list } from './cars';
 
   // @TODO Add an endpoint to GET a list of cars
   // it should be filterable by make with a query paramater
+    app.get( "/cars/", ( req: Request, res: Response ) => {
+        let { make } = req.query;
+        let out = cars;
+
+        if ( make ) {
+            out.filter(x, 0, )
+        }
+
+        return res.status(200)
+            .send(out);
+    } );
+
 
   // @TODO Add an endpoint to get a specific car
   // it should require id
